@@ -1,0 +1,72 @@
+.dbg-kw {
+    font-size: 12px;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.dbg-kw.dbg-object {
+    color: #B20000;
+}
+.dbg-kw>em,.dbg-kw>span {
+    font-weight: bold;
+    color: #0033CC;
+}
+.dbg-kw.dbg-object > ul {
+    margin-top: 0;
+    padding: 8px;
+    color: #000000;
+    list-style: none;
+    background-color: #FFFFF0;
+}
+.dbg-kw.dbg-object .dbg-kw.dbg-object > ul {
+    background-color: #FEFFD0;
+}
+.dbg-kw.dbg-object > ul > li {
+    border-left: solid 1px #80C8FE;
+    padding-left: 4px;
+    margin-bottom: 2px;
+}
+.dbg-kw.dbg-object > ul > li > span.dbg-level {
+    float: left;
+    min-width: 120px;
+}
+.dbg-kw.dbg-object > ul > li > span.dbk-key {
+    float: left;
+    min-width: 100px;
+    font-weight: bold;
+    color: #008E00;
+}
+.dbg-kw.dbg-str span {
+    color: #B20000;
+}
+.dbg-kw.dbg-str span em {
+    color: #FE8080;
+    padding: 0 1px;
+}
+.dbg-kw.dbg-null {
+    font-style: italic;
+    color: #00248E;
+}
+.dbg-kw.dbg-array > ul {
+    margin-top: 0;
+    padding: 8px;
+    color: #000000;
+    list-style: none;
+    background-color: #E3F6FF;
+}
+.dbg-kw.dbg-array > ul > li {
+    border-left: solid 1px #809FFE;
+    padding-left: 4px;
+    margin-bottom: 2px;
+    min-height: 18px;
+}
+.dbg-kw.dbg-array > ul > li > .dbg-key {
+    float: left;
+    min-width: 100px;
+}
+.dbg-kw.dbg-array > ul > li > em {
+    float: left;
+    font-weight: bold;
+    color: #0033CC;
+    margin-right: 6px;
+}
