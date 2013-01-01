@@ -42,7 +42,7 @@ $static = foo::getInstance();
 $instance = new foo('from code', 'bar');
 $instance->val3 = new bar();
 echo 'without nesting levels <br />';
-echo var_debug($instance);
+echo var_debug($instance, 1);
 
-echo 'with nesting levels <br />';
+echo '<hr />with nesting levels <br />';
 echo var_debug($instance, 2);

@@ -1,3 +1,6 @@
+.dbg-kw > ul {
+    display: none;
+}
 .dbg-kw {
     font-size: 12px;
     color: #000000;
@@ -6,6 +9,9 @@
 }
 .dbg-kw.dbg-object {
     color: #B20000;
+}
+.dbg-kw.dbg-object>em, .dbg-kw.dbg-array>em {
+    cursor: pointer;
 }
 .dbg-kw>em,.dbg-kw>span {
     font-weight: bold;

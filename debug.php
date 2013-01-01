@@ -1,14 +1,21 @@
 <?php
 /**
- * Cute debugging function (with html & css)
- * @param mixed $var
+ * This file is distributed under the MIT Open Source
+ * License. See README.MD for details.
+ * @author Ioan CHIRIAC
+ */
+/**
+ * Cute debugging function (with html & css) and limited levels of objects
+ * @param mixed $var The varinstance to be analyzed
+ * @param integer $nested The maximum nested level of objects introspection
  * @return string
  */
-function var_debug( $var, $nested = 1 ) {
+function var_debug( $var, $nested = 2 ) {
     static $css;
     $prefix = null;
     if ( !$css ) {
-        $prefix = '<link href="style.css" media="screen" rel="stylesheet" type="text/css" />';
+        $prefix = '<style type="text/css">' . file_get_contents(__DIR__ . '/debug.css').'</style>';
+        $prefix .= '<script type="text/javascript">' . file_get_contents(__DIR__ . '/debug.js').'</script>';
         $css = true;
     }
     if ( is_null($var) ) {
@@ -41,7 +48,7 @@ function var_debug( $var, $nested = 1 ) {
     } elseif ( is_array($var) ) {
         $ret = $prefix . '<span class="dbg-kw dbg-array">array(<em>'.count($var).'</em>)<ul>';
         foreach($var as $k => $v) {
-            $ret .= '<li><span class="dbg-key">'.var_debug($k).'</span><em>=&gt;</em><span class="dbg-val">'.var_debug($v).'</span></li>';
+            $ret .= '<li><span class="dbg-key">'.var_debug($k).'</span><em>=&gt;</em><span class="dbg-val">'.var_debug($v, $nested).'</span></li>';
         }
         return $ret . '</ul></span>';
     } elseif ( is_resource($var) ) {
