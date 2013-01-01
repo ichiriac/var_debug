@@ -17,6 +17,10 @@ The answer is quite simple :
 * Customize the nesting level depending of what you expect
 * Easy expand/collapse details by clicking on classes names or array sizes
 
+# Preview of test.php
+
+![var_debug preview](https://raw.github.com/ichiriac/var_debug/master/preview.png)
+
 ## MIT License
 
 Copyright (C) <2012> <PHP Hacks Team : http://coderwall.com/team/php-hacks>
