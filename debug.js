@@ -1,7 +1,7 @@
 
 var start = function() {
     (function($) {
-        $('.dbg-kw.dbg-object>em, .dbg-kw.dbg-array>em').click(function() {
+        $(document).delegate('.dbg-kw.dbg-object>em, .dbg-kw.dbg-array>em', 'click', function() {
             $(this).parent().find('>ul').first().slideToggle();
         });
     }(jQuery));
